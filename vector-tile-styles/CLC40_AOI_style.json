@@ -1,0 +1,60 @@
+{
+  "version": 8,
+  "sources": {
+    "CLC40_AOI": {
+      "type": "geojson",
+      "data": "https://raw.githubusercontent.com/jebowe3/geojson-files/main/CLC40_AOI.json"
+    }
+  },
+  "layers": [
+    {
+      "id": "arable",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "CLC40_AOI",
+      "filter": ["all", ["==", "Type", "Arable"]],
+      "paint": {"fill-color": "#f2c84b"}
+    },
+    {
+      "id": "forest",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "CLC40_AOI",
+      "filter": ["all", ["==", "Type", "Forest"]],
+      "paint": {"fill-color": "#6f8c51"}
+    },
+    {
+      "id": "water",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "CLC40_AOI",
+      "filter": ["all", ["==", "Type", "Water"]],
+      "layout": {"visibility": "visible"},
+      "paint": {"fill-color": "#4189a6"}
+    },
+    {
+      "id": "grass",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "CLC40_AOI",
+      "filter": ["all", ["==", "Type", "Grass"]],
+      "paint": {"fill-color": "#9ba64b"}
+    },
+    {
+      "id": "barren",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "CLC40_AOI",
+      "filter": ["all", ["==", "Type", "Barren"]],
+      "paint": {"fill-color": "#f2d7b6"}
+    },
+    {
+      "id": "wetland",
+      "type": "fill",
+      "source": "composite",
+      "source-layer": "CLC40_AOI", 
+      "filter": ["all", ["==", "Type", "Wetland"]],
+      "paint": {"fill-color": "#c4d474"}
+    }
+  ]
+}
